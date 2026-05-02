@@ -24,9 +24,9 @@ resource "aws_backup_vault" "this" {
 resource "aws_backup_vault_lock_configuration" "this" {
   count = var.enable_vault_lock ? 1 : 0
 
-  backup_vault_name   = aws_backup_vault.this.name
-  min_retention_days  = var.vault_lock_min_retention_days
-  max_retention_days  = var.vault_lock_max_retention_days
+  backup_vault_name  = aws_backup_vault.this.name
+  min_retention_days = var.vault_lock_min_retention_days
+  max_retention_days = var.vault_lock_max_retention_days
 }
 
 resource "aws_iam_role" "backup" {
