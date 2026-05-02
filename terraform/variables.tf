@@ -55,3 +55,13 @@ variable "tags" {
   type    = map(string)
   default = {}
 }
+
+variable "owner" {
+  type    = string
+  default = "adityabhuvanraj36@gmail.com"
+}
+
+variable "project_name" {
+  type    = string
+  default = "EKS Platform"
+}
